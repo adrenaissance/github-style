@@ -8,7 +8,7 @@
             <span class="user-profile-mini-avatar d-table-cell v-align-middle lh-condensed-ultra pr-2">
               {{ if $.Site.Params.github }}
                 <img class="rounded-1 avatar-user" height="32" width="32" src="https://github.com/{{ $.Site.Params.github }}.png">
-              {{ else $.Site.Params.avatar }}
+              {{ else if $.Site.Params.avatar }}
               <img class="rounded-1 avatar-user" height="32" width="32" src="{{ $.Site.Params.avatar }}">
               {{ else }}
                 <img class="rounded-1 avatar-user" height="32" width="32" src="{{ "images/avatar.png" | absURL }}">
