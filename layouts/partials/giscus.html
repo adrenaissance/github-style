@@ -1,0 +1,20 @@
+{{ if .Site.Params.enableGiscus }}
+  <footer>
+    <script src="https://giscus.app/client.js"
+      data-repo="{{ .Site.Params.giscus.repo }}"
+      data-repo-id="{{ .Site.Params.giscus.repo_id }}"
+      data-category="{{ .Site.Params.giscus.category }}"
+      data-category-id="{{ .Site.Params.giscus.category_id }}"
+      data-mapping="{{ .Site.Params.giscus.mapping }}"
+      data-strict="{{ if .Site.Params.giscus.strict }}1{{ else }}0{{ end }}"
+      data-reactions-enabled="{{ if .Site.Params.giscus.reactions_enabled }}1{{ else }}0{{ end }}"
+      data-emit-metadata="{{ if .Site.Params.giscus.emit_metadata }}1{{ else }}0{{ end }}"
+      data-input-position="{{ .Site.Params.giscus.input_position }}"
+      data-theme="{{ .Site.Params.giscus.theme }}"
+      data-lang="{{ .Site.Params.giscus.lang }}"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </footer>
+{{ end }}
